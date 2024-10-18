@@ -17,5 +17,5 @@ def main():
     kiralynok([0, 4, 7, 5, 2, 6, 1, 3])
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

@@ -511,6 +511,7 @@ mhvisju lhmdbs tcxied xeidtc ujry cditex gvqpqm
 cgc jazrp crgnna uvuokl uvuokl uoiwl sknmc sknmc
 rvbu czwpdit vmlihg spz lfaxxev zslfuto oog dvoksub"""
 
+
 def isValid(paraphrase):
     d = {}
     passwords = paraphrase.split()
@@ -521,6 +522,8 @@ def isValid(paraphrase):
     if len(passwords) == len(d.keys()):
         return True
     return False
+
+
 def main():
     listOfParaphrases = paraphrases.split("\n")
     count = 0
@@ -530,25 +533,5 @@ def main():
     print(count)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -6,8 +6,26 @@ A döntés várhatóan nem marad politikai visszhang nélkül Spanyolországban,
 
 
 def main():
-    d = {"á": "a", "Á": "A", "í": "i", "Í": "I", "é": "e", "É": "E", "ú": "u", "Ú": "U", "Ü": "U", "ü": "u", "Ű": "U",
-         "ű": "u", "ó": "o", "Ó": "O", "Ö": "O", "ö": "o", "Ő": "O", "ő": "o"}
+    d = {
+        "á": "a",
+        "Á": "A",
+        "í": "i",
+        "Í": "I",
+        "é": "e",
+        "É": "E",
+        "ú": "u",
+        "Ú": "U",
+        "Ü": "U",
+        "ü": "u",
+        "Ű": "U",
+        "ű": "u",
+        "ó": "o",
+        "Ó": "O",
+        "Ö": "O",
+        "ö": "o",
+        "Ő": "O",
+        "ő": "o",
+    }
 
     new_text = ""
     for char in TEXT:
@@ -18,5 +36,5 @@ def main():
     print(new_text)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

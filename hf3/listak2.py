@@ -20,14 +20,14 @@
 # Példa: [1, 2, 2, 3] -> [1, 2, 3].
 # Készíthetünk egy új listát, vagy módosíthatjuk a bemeneti listát is.
 def remove_adjacent(nums):
-    
-    #return list(set(nums))
-    
+    # return list(set(nums))
+
     result = []
     for item in nums:
         if item not in result:
             result.append(item)
     return result
+
 
 # E.
 # Bemenet: két lista, mindkettőben az elemek növekvő sorrendbe rendezve.
@@ -40,31 +40,29 @@ def list_merge(list1, list2):
 # azt is, hogy mit kellett volna visszaadniuk.
 def test(got, expected):
     if got == expected:
-        prefix = ' OK '
+        prefix = " OK "
     else:
-        prefix = '  X '
-    print('{p} got: {g}; expected: {e}'.format(p=prefix, g=got, e=expected))
+        prefix = "  X "
+    print("{p} got: {g}; expected: {e}".format(p=prefix, g=got, e=expected))
 
 
 # Ezt ne módosítsuk.
 # A main() fv. meghívja a fenti fv.-eket különféle paraméterekkel,
 # s a test() fv. segítségével megnézi, hogy az eredmények helyesek-e.
 def main():
-    print('remove_adjacent')
+    print("remove_adjacent")
     test(remove_adjacent([1, 2, 2, 3]), [1, 2, 3])
     test(remove_adjacent([2, 2, 3, 3, 3]), [2, 3])
     test(remove_adjacent([]), [])
 
     print()
-    print('list_merge')
-    test(list_merge(['aa', 'xx', 'zz'], ['bb', 'cc']),
-         ['aa', 'bb', 'cc', 'xx', 'zz'])
-    test(list_merge(['aa', 'xx'], ['bb', 'cc', 'zz']),
-         ['aa', 'bb', 'cc', 'xx', 'zz'])
-    test(list_merge(['aa', 'aa'], ['aa', 'bb', 'bb']),
-         ['aa', 'aa', 'aa', 'bb', 'bb'])
+    print("list_merge")
+    test(list_merge(["aa", "xx", "zz"], ["bb", "cc"]), ["aa", "bb", "cc", "xx", "zz"])
+    test(list_merge(["aa", "xx"], ["bb", "cc", "zz"]), ["aa", "bb", "cc", "xx", "zz"])
+    test(list_merge(["aa", "aa"], ["aa", "bb", "bb"]), ["aa", "aa", "aa", "bb", "bb"])
+
 
 #############################################################################
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

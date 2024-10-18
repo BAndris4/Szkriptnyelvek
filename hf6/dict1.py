@@ -67,6 +67,7 @@ what you're at-- there"; and he threw down three or four gold pieces on
 the threshold. "You can tell me when I've worked through that," says he,
 looking as fierce as a commander."""
 
+
 def main():
     irasjelek = "'\",.;:-_?"
     words = TEXT.lower().split()
@@ -74,14 +75,13 @@ def main():
         words[i] = words[i].strip(irasjelek)
     d = {}
     for word in words:
-        d[word] = d.get(word, 0)+1
+        d[word] = d.get(word, 0) + 1
 
     for key, value in sorted(d.items(), key=lambda item: item[1], reverse=True):
         print(key, value)
 
 
-
 #############################################################################
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

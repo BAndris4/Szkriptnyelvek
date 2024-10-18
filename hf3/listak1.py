@@ -39,7 +39,7 @@ def front_x(words):
     lix = []
     linx = []
     for item in words:
-        if item[0]=="x":
+        if item[0] == "x":
             lix.append(item)
         else:
             linx.append(item)
@@ -50,31 +50,38 @@ def front_x(words):
 # azt is, hogy mit kellett volna visszaadniuk.
 def test(got, expected):
     if got == expected:
-        prefix = ' OK '
+        prefix = " OK "
     else:
-        prefix = '  X '
-    print('{p} got: {g}; expected: {e}'.format(p=prefix, g=got, e=expected))
+        prefix = "  X "
+    print("{p} got: {g}; expected: {e}".format(p=prefix, g=got, e=expected))
 
 
 # Ezt ne módosítsuk.
 # A main() fv. meghívja a fenti fv.-eket különféle paraméterekkel,
 # s a test() fv. segítségével megnézi, hogy az eredmények helyesek-e.
 def main():
-    print('match_ends')
-    test(match_ends(['aba', 'xyz', 'aa', 'x', 'bbb']), 3)
-    test(match_ends(['', 'x', 'xy', 'xyx', 'xx']), 2)
-    test(match_ends(['aaa', 'be', 'abc', 'hello']), 1)
+    print("match_ends")
+    test(match_ends(["aba", "xyz", "aa", "x", "bbb"]), 3)
+    test(match_ends(["", "x", "xy", "xyx", "xx"]), 2)
+    test(match_ends(["aaa", "be", "abc", "hello"]), 1)
 
     print()
-    print('front_x')
-    test(front_x(['bbb', 'ccc', 'axx', 'xzz', 'xaa']),
-         ['xaa', 'xzz', 'axx', 'bbb', 'ccc'])
-    test(front_x(['ccc', 'bbb', 'aaa', 'xcc', 'xaa']),
-         ['xaa', 'xcc', 'aaa', 'bbb', 'ccc'])
-    test(front_x(['mix', 'xyz', 'apple', 'xanadu', 'aardvark']),
-         ['xanadu', 'xyz', 'aardvark', 'apple', 'mix'])
+    print("front_x")
+    test(
+        front_x(["bbb", "ccc", "axx", "xzz", "xaa"]),
+        ["xaa", "xzz", "axx", "bbb", "ccc"],
+    )
+    test(
+        front_x(["ccc", "bbb", "aaa", "xcc", "xaa"]),
+        ["xaa", "xcc", "aaa", "bbb", "ccc"],
+    )
+    test(
+        front_x(["mix", "xyz", "apple", "xanadu", "aardvark"]),
+        ["xanadu", "xyz", "aardvark", "apple", "mix"],
+    )
+
 
 #############################################################################
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

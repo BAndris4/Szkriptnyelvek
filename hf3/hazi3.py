@@ -57,10 +57,10 @@ def palindromrek(szoveg):
 def valami():
     inp = input("Do you really want to quit [y/Y/yes]? ")
     if inp in ["y", "Y", "yes"]:  # <- egyszerűbben?
-        print('bye')
+        print("bye")
         # sys.exit(0)
     # for any other input:
-    print('The show goes on...')
+    print("The show goes on...")
 
 
 def stringtisztazas(szoveg):
@@ -71,7 +71,7 @@ def stringtisztazas(szoveg):
 
 
 def rejtelyesuzenet(szoveg):
-    '''abc = "abcdefghijklmnopqrstuvwxyz"
+    """abc = "abcdefghijklmnopqrstuvwxyz"
     Abc = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     result = ""
     for item in szoveg:
@@ -89,7 +89,7 @@ def rejtelyesuzenet(szoveg):
             result += Abc[betuindex]
 
         else:
-            result += item'''
+            result += item"""
 
     abc = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
     Abc = "cdefghijklmnopqrstuvwxyzabCDEFGHIJKLMNOPQRSTUVWXYZAB"

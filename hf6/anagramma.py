@@ -34,5 +34,5 @@ def main():
     print(isanagram2("alma", "banan"))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

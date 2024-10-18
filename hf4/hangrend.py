@@ -10,13 +10,14 @@ def magasmely(text):
             magas = True
         if magas and mely:
             return "vegyes"
-    
+
     if magas:
         return "magas"
     elif mely:
         return "mély"
     else:
-        return "semmilyen" 
+        return "semmilyen"
+
 
 def main():
     print(magasmely("ablak"))
@@ -26,8 +27,8 @@ def main():
     print(magasmely("mély"))
     print(magasmely("Pffffff"))
 
-
     return 0
+
 
 if __name__ == "__main__":
     main()

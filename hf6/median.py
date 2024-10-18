@@ -3,9 +3,9 @@ def median(li):
     li.sort()
     print(li)
     if len(li) % 2 == 0:
-        return (li[len(li)//2-1] + li[len(li)//2]) / 2
+        return (li[len(li) // 2 - 1] + li[len(li) // 2]) / 2
     else:
-        return li[len(li)//2]
+        return li[len(li) // 2]
 
 
 def main():
@@ -15,5 +15,5 @@ def main():
     print(median([3, 6, 20, 99, 10, 15]))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

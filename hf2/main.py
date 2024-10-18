@@ -16,7 +16,7 @@ def szamforditas(szam):
 
 
 def szamjegyek():
-    print(len(str(2 ** 256)))
+    print(len(str(2**256)))
 
 
 def osszeadasa():

@@ -24,11 +24,11 @@
 # hagyjuk változatlanul.
 # Adjuk vissza az eredménysztringet.
 def verbing(s):
-    if len(s)<3:
+    if len(s) < 3:
         return s
-    elif s[-3:]=="ing":
-        return s+"ly"
-    return s+"ing"
+    elif s[-3:] == "ing":
+        return s + "ly"
+    return s + "ing"
 
 
 # F. not_bad
@@ -40,8 +40,8 @@ def verbing(s):
 # Példa: 'This dinner is not that bad!' ->
 #        This dinner is good!
 def not_bad(s):
-    if s.find("not")<s.find("bad"):
-        s = s[:s.find("not")]+"good"+s[s.find("bad")+3:]
+    if s.find("not") < s.find("bad"):
+        s = s[: s.find("not")] + "good" + s[s.find("bad") + 3 :]
     return s
 
 
@@ -58,46 +58,47 @@ def not_bad(s):
 def front_back(a, b):
     ahossz = len(a)
     bhossz = len(b)
-    a1 = a[:ahossz//2+ahossz%2]
-    b1 = b[:bhossz//2+bhossz%2]
-    a2 = a[ahossz//2+ahossz%2:]
-    b2 = b[bhossz//2+bhossz%2:]
-    return a1+b1+a2+b2
+    a1 = a[: ahossz // 2 + ahossz % 2]
+    b1 = b[: bhossz // 2 + bhossz % 2]
+    a2 = a[ahossz // 2 + ahossz % 2 :]
+    b2 = b[bhossz // 2 + bhossz % 2 :]
+    return a1 + b1 + a2 + b2
 
 
 # Egy egyszerű teszt fv. Kiírja az egyes fv.-ek visszaadott értékét, ill.
 # azt is, hogy mit kellett volna visszaadniuk.
 def test(got, expected):
     if got == expected:
-        prefix = ' OK '
+        prefix = " OK "
     else:
-        prefix = '  X '
-    print('{p} got: {g}; expected: {e}'.format(p=prefix, g=got, e=expected))
+        prefix = "  X "
+    print("{p} got: {g}; expected: {e}".format(p=prefix, g=got, e=expected))
 
 
 # Ezt ne módosítsuk.
 # A main() fv. meghívja a fenti fv.-eket különféle paraméterekkel,
 # s a test() fv. segítségével megnézi, hogy az eredmények helyesek-e.
 def main():
-    print('verbing')
-    test(verbing('hail'), 'hailing')
-    test(verbing('swiming'), 'swimingly')
-    test(verbing('do'), 'do')
+    print("verbing")
+    test(verbing("hail"), "hailing")
+    test(verbing("swiming"), "swimingly")
+    test(verbing("do"), "do")
 
     print()
-    print('not_bad')
-    test(not_bad('This movie is not so bad'), 'This movie is good')
-    test(not_bad('This dinner is not that bad!'), 'This dinner is good!')
-    test(not_bad('This tea is not hot'), 'This tea is not hot')
+    print("not_bad")
+    test(not_bad("This movie is not so bad"), "This movie is good")
+    test(not_bad("This dinner is not that bad!"), "This dinner is good!")
+    test(not_bad("This tea is not hot"), "This tea is not hot")
     test(not_bad("It's bad yet not"), "It's bad yet not")
 
     print()
-    print('front_back')
-    test(front_back('abcd', 'xy'), 'abxcdy')
-    test(front_back('abcde', 'xyz'), 'abcxydez')
-    test(front_back('Kitten', 'Donut'), 'KitDontenut')
+    print("front_back")
+    test(front_back("abcd", "xy"), "abxcdy")
+    test(front_back("abcde", "xyz"), "abcxydez")
+    test(front_back("Kitten", "Donut"), "KitDontenut")
+
 
 #############################################################################
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

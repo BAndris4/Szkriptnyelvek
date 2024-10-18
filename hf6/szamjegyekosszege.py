@@ -9,5 +9,6 @@ def szamjegyekosszege(num):
 def main():
     print(szamjegyekosszege(2**1000))
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()

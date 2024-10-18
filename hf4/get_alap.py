@@ -1,6 +1,6 @@
 import os
 
-pythonalap = ''' #!/usr/bin/env python3
+pythonalap = """ #!/usr/bin/env python3
 
 
 def main():
@@ -10,15 +10,16 @@ def main():
 
 if __name__ == "__main__":
     main()
-'''
+"""
+
 
 def main():
-    szoveg = '''---------------------------
+    szoveg = """---------------------------
 Create an empty source file
 ---------------------------
 1) Python [py]
 2) C      [c]
-q) quit'''
+q) quit"""
 
     option = ""
     while option != "q":
@@ -37,6 +38,7 @@ q) quit'''
             else:
                 f = open("alap.c", "w")
                 f.close()
+
 
 if __name__ == "__main__":
     main()
